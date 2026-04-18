@@ -11,6 +11,13 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
+    // Force Dark mode if first time visiting with the new update
+    const savedVersion = localStorage.getItem('settings_version_t');
+    if (savedVersion !== 'v2') {
+      localStorage.setItem('settings_version_t', 'v2');
+      localStorage.setItem('theme', 'dark');
+      return 'dark';
+    }
     return (localStorage.getItem('theme') as Theme) || 'dark';
   });
 

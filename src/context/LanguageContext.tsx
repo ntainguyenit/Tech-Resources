@@ -12,6 +12,13 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>(() => {
+    // Force English if first time visiting with the new update
+    const savedVersion = localStorage.getItem('settings_version');
+    if (savedVersion !== 'v2') {
+      localStorage.setItem('settings_version', 'v2');
+      localStorage.setItem('lang', 'en');
+      return 'en';
+    }
     return (localStorage.getItem('lang') as Language) || 'en';
   });
 
