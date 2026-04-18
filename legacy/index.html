@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tech Resources Hub - Curated developer tools, AI assistants, UI/UX resources by Tai Nguyen.">
+<meta name="author" content="Tai Nguyen">
+<title>Tech Resources Hub — Tai Nguyen</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0f11;--surface:#17171b;--surface2:#1e1e24;--border:#2a2a33;--text:#e8e8f0;--muted:#7a7a90;--accent1:#7c6af7;--accent2:#3dd9a0;--accent3:#f7a256;--accent4:#f75694;--accent5:#56c8f7;--accent6:#c8f756;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Instrument Sans',sans-serif;min-height:100vh;padding-bottom:80px;-webkit-user-select:none;-moz-user-select:none;user-select:none;}
+a{color:inherit;text-decoration:none;}
+img{-webkit-user-drag:none;pointer-events:none;}
+
+#sec-warn{display:none;position:fixed;inset:0;z-index:9999;background:rgba(10,10,14,.96);backdrop-filter:blur(12px);align-items:center;justify-content:center;flex-direction:column;gap:14px;}
+#sec-warn.show{display:flex;}
+.sec-icon{font-size:44px;}
+.sec-msg{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;color:var(--accent4);text-align:center;}
+.sec-sub{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);text-align:center;max-width:320px;}
+.sec-close{margin-top:4px;padding:8px 22px;background:var(--accent1);color:#fff;border:none;border-radius:8px;font-family:'Instrument Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:opacity .15s;}
+.sec-close:hover{opacity:.8;}
+
+.navbar{position:sticky;top:0;z-index:200;background:rgba(15,15,17,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.navbar-top{display:flex;align-items:center;gap:12px;padding:10px 24px;}
+.nav-logo-img{width:30px;height:30px;border-radius:50%;object-fit:cover;flex-shrink:0;pointer-events:none;}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:14px;letter-spacing:-.5px;white-space:nowrap;background:linear-gradient(135deg,var(--text),var(--accent1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;}
+.nav-spacer{flex:1;}
+.lang-toggle{display:flex;align-items:center;background:var(--surface2);border:1px solid var(--border);border-radius:6px;overflow:hidden;flex-shrink:0;}
+.lang-opt{padding:4px 10px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.5px;color:var(--muted);cursor:pointer;transition:all .15s;border:none;background:none;line-height:1;}
+.lang-sep{width:1px;height:14px;background:var(--border);flex-shrink:0;}
+.lang-opt.active{color:#fff;background:var(--accent1);}
+.lang-opt:not(.active):hover{color:var(--text);}
+.navbar-nav{display:flex;align-items:center;gap:2px;padding:0 20px 9px;overflow-x:auto;scrollbar-width:none;}
+.navbar-nav::-webkit-scrollbar{display:none;}
+.nav-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:5px;font-size:11px;font-weight:500;white-space:nowrap;cursor:pointer;color:var(--muted);border:1px solid transparent;transition:all .15s;text-decoration:none;}
+.nav-chip:hover{color:var(--text);background:var(--surface2);border-color:var(--border);}
+.nav-chip svg{flex-shrink:0;opacity:.5;}
+
+.page-wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+.hero{padding:44px 0 34px;border-bottom:1px solid var(--border);margin-bottom:32px;}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(24px,5vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;background:linear-gradient(135deg,var(--text) 0%,var(--accent1) 50%,var(--accent2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:14px;}
+.hero-typewriter{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--accent2);min-height:20px;display:flex;align-items:center;}
+.cursor{display:inline-block;width:2px;height:1em;background:var(--accent2);margin-left:2px;vertical-align:middle;animation:blink 1s step-end infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-sub{margin-top:10px;font-size:12px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+
+.suggest-banner{background:var(--surface);border:1px solid var(--accent1);border-radius:12px;padding:14px 18px;margin-bottom:24px;display:none;}
+.suggest-banner.show{display:block;}
+.suggest-banner-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--accent1);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.suggest-chips{display:flex;flex-wrap:wrap;gap:6px;}
+.suggest-chip{padding:4px 12px;background:color-mix(in srgb,var(--accent1) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent1) 25%,transparent);border-radius:20px;font-size:11.5px;font-weight:500;color:var(--accent1);cursor:pointer;transition:all .15s;text-decoration:none;}
+.suggest-chip:hover{background:color-mix(in srgb,var(--accent1) 22%,transparent);}
+.suggest-reset{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);cursor:pointer;text-decoration:underline;margin-top:8px;display:inline-block;}
+.suggest-reset:hover{color:var(--accent4);}
+
+.main{display:flex;flex-direction:column;gap:7px;}
+.module{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.module-header{display:flex;align-items:center;gap:11px;padding:13px 17px;cursor:pointer;user-select:none;position:relative;overflow:hidden;transition:background .15s;}
+.module-header:hover{background:rgba(255,255,255,.025);}
+.module-header::before{content:'';position:absolute;inset:0;opacity:.055;pointer-events:none;}
+.m1 .module-header::before{background:var(--accent1);}.m2 .module-header::before{background:var(--accent5);}
+.m3 .module-header::before{background:var(--accent2);}.m4 .module-header::before{background:var(--accent3);}
+.m5 .module-header::before{background:var(--accent4);}.m6 .module-header::before{background:var(--accent6);}
+.m7 .module-header::before{background:var(--accent1);}.m8 .module-header::before{background:var(--accent5);}
+.m9 .module-header::before{background:var(--accent2);}.m10 .module-header::before{background:var(--accent3);}
+.module-folder{flex-shrink:0;position:relative;z-index:1;width:30px;height:26px;display:flex;align-items:center;justify-content:center;}
+.module-folder svg{display:block;}
+.m1 .folder-shape{fill:color-mix(in srgb,var(--accent1) 18%,transparent);stroke:var(--accent1);}
+.m2 .folder-shape{fill:color-mix(in srgb,var(--accent5) 18%,transparent);stroke:var(--accent5);}
+.m3 .folder-shape{fill:color-mix(in srgb,var(--accent2) 18%,transparent);stroke:var(--accent2);}
+.m4 .folder-shape{fill:color-mix(in srgb,var(--accent3) 18%,transparent);stroke:var(--accent3);}
+.m5 .folder-shape{fill:color-mix(in srgb,var(--accent4) 18%,transparent);stroke:var(--accent4);}
+.m6 .folder-shape{fill:color-mix(in srgb,var(--accent6) 18%,transparent);stroke:var(--accent6);}
+.m7 .folder-shape{fill:color-mix(in srgb,var(--accent1) 18%,transparent);stroke:var(--accent1);}
+.m8 .folder-shape{fill:color-mix(in srgb,var(--accent5) 18%,transparent);stroke:var(--accent5);}
+.m9 .folder-shape{fill:color-mix(in srgb,var(--accent2) 18%,transparent);stroke:var(--accent2);}
+.m10 .folder-shape{fill:color-mix(in srgb,var(--accent3) 18%,transparent);stroke:var(--accent3);}
+.module-title-wrap{flex:1;position:relative;z-index:1;}
+.module-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;letter-spacing:-.2px;}
+.module-desc{font-size:10px;color:var(--muted);margin-top:1px;font-family:'IBM Plex Mono',monospace;}
+.module-meta{display:flex;align-items:center;gap:8px;position:relative;z-index:1;}
+.module-count{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);padding:3px 8px;background:var(--surface2);border-radius:20px;border:1px solid var(--border);}
+.collapse-btn{width:20px;height:20px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:transform .22s ease,color .15s;flex-shrink:0;}
+.module.collapsed .collapse-btn{transform:rotate(-90deg);}
+.module-header:hover .collapse-btn{color:var(--text);}
+.module-body{padding:13px 17px 16px;overflow:hidden;transition:max-height .28s ease,opacity .2s ease,padding .22s ease;max-height:3000px;opacity:1;}
+.module.collapsed .module-body{max-height:0;opacity:0;padding-top:0;padding-bottom:0;}
+.section{margin-bottom:14px;}.section:last-child{margin-bottom:0;}
+.section-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:7px;padding-bottom:5px;border-bottom:1px solid var(--border);}
+.links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px;}
+.link-card{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:7px;text-decoration:none;color:var(--text);transition:all .15s;}
+.link-card:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.25);}
+.m1 .link-card:hover{border-color:var(--accent1);background:color-mix(in srgb,var(--accent1) 6%,var(--surface2));}
+.m2 .link-card:hover{border-color:var(--accent5);background:color-mix(in srgb,var(--accent5) 6%,var(--surface2));}
+.m3 .link-card:hover{border-color:var(--accent2);background:color-mix(in srgb,var(--accent2) 6%,var(--surface2));}
+.m4 .link-card:hover{border-color:var(--accent3);background:color-mix(in srgb,var(--accent3) 6%,var(--surface2));}
+.m5 .link-card:hover{border-color:var(--accent4);background:color-mix(in srgb,var(--accent4) 6%,var(--surface2));}
+.m6 .link-card:hover{border-color:var(--accent6);background:color-mix(in srgb,var(--accent6) 6%,var(--surface2));}
+.m7 .link-card:hover{border-color:var(--accent1);background:color-mix(in srgb,var(--accent1) 6%,var(--surface2));}
+.m8 .link-card:hover{border-color:var(--accent5);background:color-mix(in srgb,var(--accent5) 6%,var(--surface2));}
+.m9 .link-card:hover{border-color:var(--accent2);background:color-mix(in srgb,var(--accent2) 6%,var(--surface2));}
+.m10 .link-card:hover{border-color:var(--accent3);background:color-mix(in srgb,var(--accent3) 6%,var(--surface2));}
+.link-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+.m1 .link-dot{background:var(--accent1);}.m2 .link-dot{background:var(--accent5);}
+.m3 .link-dot{background:var(--accent2);}.m4 .link-dot{background:var(--accent3);}
+.m5 .link-dot{background:var(--accent4);}.m6 .link-dot{background:var(--accent6);}
+.m7 .link-dot{background:var(--accent1);}.m8 .link-dot{background:var(--accent5);}
+.m9 .link-dot{background:var(--accent2);}.m10 .link-dot{background:var(--accent3);}
+.link-info{flex:1;min-width:0;}
+.link-name{font-size:12px;font-weight:600;line-height:1.3;display:block;}
+.link-note{font-size:10px;color:var(--muted);margin-top:2px;line-height:1.4;display:block;}
+.link-ext{font-size:9px;color:var(--muted);font-family:'IBM Plex Mono',monospace;flex-shrink:0;margin-top:4px;}
+.text-list{display:flex;flex-wrap:wrap;gap:5px;}
+.text-tag{padding:4px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:5px;font-size:11.5px;color:var(--text);font-weight:500;}
+.note-block{display:flex;gap:9px;padding:9px 12px;background:var(--surface2);border-left:3px solid;border-radius:5px;font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.5;}
+.note-block strong{color:var(--text);}
+
+.footer{max-width:960px;margin:48px auto 0;padding:18px 24px 0;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:center;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);}
+
+.wz-overlay{position:fixed;inset:0;z-index:1000;background:rgba(5,5,8,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .3s;}
+.wz-overlay.open{opacity:1;}
+.wz-box{background:var(--surface);border:1px solid var(--border);border-radius:20px;width:100%;max-width:540px;overflow:hidden;transform:translateY(20px) scale(.97);transition:transform .3s;}
+.wz-overlay.open .wz-box{transform:translateY(0) scale(1);}
+.wz-progress{height:3px;background:var(--border);}
+.wz-progress-bar{height:100%;background:linear-gradient(90deg,var(--accent1),var(--accent2));transition:width .3s ease;}
+.wz-head{padding:20px 22px 0;}
+.wz-steps{display:flex;align-items:center;gap:0;margin-bottom:18px;}
+.wz-step-dot{width:26px;height:26px;border-radius:50%;border:2px solid var(--border);background:var(--surface2);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;color:var(--muted);transition:all .2s;flex-shrink:0;}
+.wz-step-dot.active{border-color:var(--accent1);background:var(--accent1);color:#fff;}
+.wz-step-dot.done{border-color:var(--accent2);background:var(--accent2);color:#0f0f11;}
+.wz-step-line{flex:1;height:2px;background:var(--border);transition:background .2s;}
+.wz-step-line.done{background:var(--accent2);}
+.wz-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;letter-spacing:-.4px;margin-bottom:4px;}
+.wz-sub{font-size:12px;color:var(--muted);margin-bottom:2px;}
+.wz-body{padding:16px 22px;min-height:210px;}
+.wz-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.wz-opt{display:flex;align-items:center;gap:10px;padding:10px 13px;background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:all .15s;}
+.wz-opt:hover{border-color:var(--accent1);background:color-mix(in srgb,var(--accent1) 6%,var(--surface2));}
+.wz-opt.selected{border-color:var(--accent1);background:color-mix(in srgb,var(--accent1) 10%,var(--surface2));}
+.wz-opt-icon{font-size:20px;flex-shrink:0;line-height:1;}
+.wz-opt-label{font-size:12px;font-weight:600;line-height:1.3;display:block;}
+.wz-opt-sub{font-size:10px;color:var(--muted);display:block;margin-top:1px;}
+.wz-err{font-size:11px;color:var(--accent4);font-family:'IBM Plex Mono',monospace;padding:0 22px 4px;min-height:20px;}
+.wz-foot{display:flex;align-items:center;justify-content:space-between;padding:12px 22px 18px;border-top:1px solid var(--border);}
+.wz-skip{font-size:11.5px;color:var(--muted);cursor:pointer;font-family:'IBM Plex Mono',monospace;background:none;border:none;transition:color .15s;}
+.wz-skip:hover{color:var(--accent4);}
+.wz-actions{display:flex;gap:8px;}
+.wz-btn{padding:7px 18px;border-radius:7px;font-family:'Instrument Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;border:none;}
+.wz-btn-back{background:var(--surface2);border:1px solid var(--border);color:var(--muted);}
+.wz-btn-back:hover{color:var(--text);border-color:var(--accent1);}
+.wz-btn-next{background:var(--accent1);color:#fff;}
+.wz-btn-next:hover{opacity:.88;}
+.wz-btn-done{background:var(--accent2);color:#0f0f11;}
+.wz-btn-done:hover{opacity:.88;}
+
+@media(max-width:640px){
+.navbar-top{padding:9px 14px;}
+.navbar-nav{padding:0 10px 8px;}
+.page-wrap{padding:0 14px;}
+.hero{padding:28px 0 22px;}
+.links-grid{grid-template-columns:1fr 1fr;}
+.module-header{padding:11px 13px;}
+.module-body{padding:11px 13px 14px;}
+.wz-grid{grid-template-columns:1fr;}
+.wz-box{border-radius:14px;}
+}
+@media(max-width:380px){.links-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div id="sec-warn">
+  <div class="sec-icon">&#128274;</div>
+  <div class="sec-msg" id="sec-msg">Hành động bị chặn</div>
+  <div class="sec-sub" id="sec-sub">Trang web này được bảo vệ. Vui lòng không can thiệp vào mã nguồn.</div>
+  <button class="sec-close" onclick="document.getElementById('sec-warn').classList.remove('show')">Dóng</button>
+</div>
+
+<nav class="navbar">
+  <div class="navbar-top">
+    <img class="nav-logo-img" src="data:image/png;base64,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" alt="TN">
+    <span class="nav-logo">Tech Resources Hub</span>
+    <span class="nav-spacer"></span>
+    <div class="lang-toggle">
+      <button class="lang-opt active" id="btnVI" onclick="setLang('vi')">VIE</button>
+      <span class="lang-sep"></span>
+      <button class="lang-opt" id="btnEN" onclick="setLang('en')">ENG</button>
+    </div>
+  </div>
+  <div class="navbar-nav">
+    <a href="#m1" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span data-vi="Học lập trình" data-en="Learn CS">Học lập trình</span></a>
+    <a href="#m2" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span data-vi="DSA &amp; Thuật toán" data-en="DSA &amp; Algorithms">DSA &amp; Thuật toán</span></a>
+    <a href="#m3" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span data-vi="Diễn đàn" data-en="Communities">Diễn đàn</span></a>
+    <a href="#m4" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span>AI Coding Tools</span></a>
+    <a href="#m5" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span data-vi="UI/UX &amp; Thiết kế" data-en="UI/UX &amp; Design">UI/UX &amp; Thiết kế</span></a>
+    <a href="#m6" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span>Animation &amp; Assets</span></a>
+    <a href="#m7" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span>Web Templates</span></a>
+    <a href="#m8" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span data-vi="Nội dung &amp; TTS" data-en="Content &amp; TTS">Nội dung &amp; TTS</span></a>
+    <a href="#m9" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span data-vi="Công cụ Dev" data-en="Dev Tools">Công cụ Dev</span></a>
+    <a href="#m10" class="nav-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 012-2h4l2 2.5H19a2 2 0 012 2V19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg><span>Roadmap</span></a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <header class="hero">
+    <h1 class="hero-title">Tech Resources Hub</h1>
+    <div class="hero-typewriter"><span id="twEl"></span><span class="cursor"></span></div>
+    <p class="hero-sub" data-vi="// Bộ sưu tập tài nguyên kỹ thuật số được tuyển chọn bởi Tai Nguyen" data-en="// A curated dev resource collection by Tai Nguyen">// Bộ sưu tập tài nguyên kỹ thuật số được tuyển chọn bởi Tai Nguyen</p>
+  </header>
+
+  <div class="suggest-banner" id="suggestBanner">
+    <div class="suggest-banner-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span id="suggestTitle" data-vi="Tài nguyên gợi ý cho bạn" data-en="Recommended for you">Tài nguyên gợi ý cho bạn</span>
+    </div>
+    <div class="suggest-chips" id="suggestChips"></div>
+    <span class="suggest-reset" onclick="resetWizard()" data-vi="Làm lại khảo sát →" data-en="Retake survey →">Làm lại khảo sát →</span>
+  </div>
+
+  <main class="main">
+    <section class="module m1 collapsed" id="m1">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="Học Lập Trình & CS" data-en="Learn Programming & CS">Học Lập Trình & CS</div>
+          <div class="module-desc" data-vi="// Kiến thức nền tảng · Ngôn ngữ · Khóa học" data-en="// Fundamentals · Languages · Courses">// Kiến thức nền tảng · Ngôn ngữ · Khóa học</div>
+        </div>
+        <div class="module-meta"><span class="module-count">7 links</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="links-grid">
+          <a href="https://code.org/students" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Code.org</span><span class="link-note" data-vi="Học CS miễn phí, mọi lứa tuổi" data-en="Free CS learning for all ages">Học CS miễn phí, mọi lứa tuổi</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.javatpoint.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Javatpoint</span><span class="link-note" data-vi="Hướng dẫn từng ngôn ngữ, ví dụ rõ" data-en="Step-by-step tutorials with examples">Hướng dẫn từng ngôn ngữ, ví dụ rõ</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.w3schools.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">W3Schools</span><span class="link-note" data-vi="Tài liệu chuẩn: HTML, CSS, JS, SQL" data-en="Standard web docs: HTML, CSS, JS">Tài liệu chuẩn: HTML, CSS, JS, SQL</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.geeksforgeeks.org/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">GeeksforGeeks</span><span class="link-note" data-vi="Kho bài CS & DSA khổng lồ" data-en="Massive CS & DSA article library">Kho bài CS & DSA khổng lồ</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.programiz.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Programiz</span><span class="link-note" data-vi="Python, C, Java... thân thiện newbie" data-en="Python, C, Java... beginner-friendly">Python, C, Java... thân thiện newbie</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.educative.io/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Educative.io</span><span class="link-note" data-vi="Khóa học tương tác, code trực tiếp" data-en="Interactive courses, run code in browser">Khóa học tương tác, code trực tiếp</span></span><span class="link-ext">↗</span></a>
+          <a href="https://viblo.asia/newest" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Viblo</span><span class="link-note" data-vi="Cộng đồng IT lớn nhất Việt Nam" data-en="Vietnam's largest IT community">Cộng đồng IT lớn nhất Việt Nam</span></span><span class="link-ext">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="module m2 collapsed" id="m2">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="DSA & Thuật Toán" data-en="DSA & Algorithms">DSA & Thuật Toán</div>
+          <div class="module-desc" data-vi="// Cấu trúc dữ liệu · Thuật toán · Luyện tập" data-en="// Data Structures · Algorithms · Practice">// Cấu trúc dữ liệu · Thuật toán · Luyện tập</div>
+        </div>
+        <div class="module-meta"><span class="module-count">9 items</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="section">
+          <div class="section-label" data-vi="Nền tảng học" data-en="Learning Platforms">Nền tảng học</div>
+          <div class="links-grid">
+          <a href="https://neetcode.io/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">NeetCode.io</span><span class="link-note" data-vi="Lộ trình DSA + video chất lượng" data-en="DSA roadmap with quality videos">Lộ trình DSA + video chất lượng</span></span><span class="link-ext">↗</span></a>
+          <a href="https://visualgo.net/en" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">VisuAlgo</span><span class="link-note" data-vi="Animation trực quan mọi thuật toán" data-en="Visual animations for all algorithms">Animation trực quan mọi thuật toán</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label" data-vi="Kênh YouTube" data-en="YouTube Channels">Kênh YouTube</div>
+          <div class="links-grid">
+          <div class="text-list"><span class="text-tag">Abdul Bari</span><span class="text-tag">Michael Sambol</span><span class="text-tag">NeetCode</span><span class="text-tag">Jenny's Lectures CS IT</span></div>
+        </div>
+        <div class="section">
+          <div class="section-label" data-vi="Luyện thuật toán" data-en="Practice Platforms">Luyện thuật toán</div>
+          <div class="links-grid">
+          <a href="https://www.hackerrank.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">HackerRank</span><span class="link-note" data-vi="Bài theo domain, cấp chứng chỉ" data-en="Domain challenges with certificates">Bài theo domain, cấp chứng chỉ</span></span><span class="link-ext">↗</span></a>
+          <a href="https://leetcode.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">LeetCode</span><span class="link-note" data-vi="Luyện phỏng vấn big tech" data-en="Big tech interview practice">Luyện phỏng vấn big tech</span></span><span class="link-ext">↗</span></a>
+          <a href="https://exercism.org/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Exercism.io</span><span class="link-note" data-vi="Mentor review miễn phí" data-en="Free mentor code reviews">Mentor review miễn phí</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.dailycodingproblem.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Daily Coding Problem</span><span class="link-note" data-vi="1 bài toán/ngày qua email" data-en="One coding problem daily by email">1 bài toán/ngày qua email</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="module m3 collapsed" id="m3">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="Diễn Đàn & Cộng Đồng" data-en="Forums & Communities">Diễn Đàn & Cộng Đồng</div>
+          <div class="module-desc" data-vi="// Q&A · Networking · Dev Community" data-en="// Q&A · Networking · Dev Community">// Q&A · Networking · Dev Community</div>
+        </div>
+        <div class="module-meta"><span class="module-count">3 links</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="links-grid">
+          <a href="https://stackoverflow.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Stack Overflow</span><span class="link-note" data-vi="Q&A lập trình số 1 thế giới" data-en="World's #1 programming Q&A">Q&A lập trình số 1 thế giới</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.hackerrank.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">HackerRank</span><span class="link-note" data-vi="Cộng đồng dev, thi coding" data-en="Dev community & contests">Cộng đồng dev, thi coding</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.reddit.com/r/programming/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Reddit r/programming</span><span class="link-note" data-vi="Tin tức & thảo luận tech" data-en="Tech news & developer discussions">Tin tức & thảo luận tech</span></span><span class="link-ext">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="module m4 collapsed" id="m4">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="AI Coding Tools" data-en="AI Coding Tools">AI Coding Tools</div>
+          <div class="module-desc" data-vi="// Assistants · Code Gen · App Builder · Review" data-en="// Assistants · Code Gen · App Builder · Review">// Assistants · Code Gen · App Builder · Review</div>
+        </div>
+        <div class="module-meta"><span class="module-count">30+ tools</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="section">
+          <div class="section-label" data-vi="AI Editor & IDE" data-en="AI Editor & IDE">AI Editor & IDE</div>
+          <div class="links-grid">
+          <a href="https://github.com/features/copilot" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">GitHub Copilot</span><span class="link-note" data-vi="Gợi ý code AI trong editor" data-en="AI code suggestions in editor">Gợi ý code AI trong editor</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.cursor.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Cursor</span><span class="link-note" data-vi="IDE AI, chat & edit codebase" data-en="AI IDE, chat & edit codebase">IDE AI, chat & edit codebase</span></span><span class="link-ext">↗</span></a>
+          <a href="https://windsurf.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Windsurf</span><span class="link-note" data-vi="IDE AI agentic bởi Codeium" data-en="Agentic AI IDE by Codeium">IDE AI agentic bởi Codeium</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.trae.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Trae</span><span class="link-note" data-vi="IDE AI miễn phí từ ByteDance" data-en="Free AI IDE by ByteDance">IDE AI miễn phí từ ByteDance</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.warp.dev/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Warp</span><span class="link-note" data-vi="Terminal AI thế hệ mới" data-en="Next-gen AI-powered terminal">Terminal AI thế hệ mới</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.augmentcode.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Augment Code</span><span class="link-note" data-vi="AI hiểu codebase dự án lớn" data-en="AI for large codebases">AI hiểu codebase dự án lớn</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.coderabbit.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">CodeRabbit</span><span class="link-note" data-vi="AI tự động review PR" data-en="Automated AI PR reviews">AI tự động review PR</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label" data-vi="Vibe Coding / App Builder" data-en="Vibe Coding / App Builder">Vibe Coding / App Builder</div>
+          <div class="links-grid">
+          <a href="https://lovable.dev/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Lovable</span><span class="link-note" data-vi="Fullstack app từ ngôn ngữ tự nhiên" data-en="Fullstack app from natural language">Fullstack app từ ngôn ngữ tự nhiên</span></span><span class="link-ext">↗</span></a>
+          <a href="https://bolt.new/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Bolt.new</span><span class="link-note" data-vi="Build & deploy ngay trong browser" data-en="Build & deploy right in browser">Build & deploy ngay trong browser</span></span><span class="link-ext">↗</span></a>
+          <a href="https://v0.dev/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">V0 by Vercel</span><span class="link-note" data-vi="Gen UI React từ prompt" data-en="Generate React UI from prompts">Gen UI React từ prompt</span></span><span class="link-ext">↗</span></a>
+          <a href="https://replit.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Replit</span><span class="link-note" data-vi="IDE online, AI Agent, mọi ngôn ngữ" data-en="Online IDE, AI Agent, any language">IDE online, AI Agent, mọi ngôn ngữ</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.dora.run/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Dora</span><span class="link-note" data-vi="Website 3D đẹp, không cần code" data-en="Stunning 3D websites, no code">Website 3D đẹp, không cần code</span></span><span class="link-ext">↗</span></a>
+          <a href="https://flames.blue/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Flames.blue</span><span class="link-note" data-vi="AI App Builder tốc độ cao" data-en="High-speed AI App Builder">AI App Builder tốc độ cao</span></span><span class="link-ext">↗</span></a>
+          <a href="https://mgx.dev/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">MGX</span><span class="link-note" data-vi="Multi-agent AI builder" data-en="Multi-agent AI builder">Multi-agent AI builder</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label" data-vi="AI Chat & Research" data-en="AI Chat & Research">AI Chat & Research</div>
+          <div class="links-grid">
+          <a href="https://claude.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Claude</span><span class="link-note" data-vi="AI Anthropic, code & phân tích tốt" data-en="Anthropic AI, great coding & analysis">AI Anthropic, code & phân tích tốt</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.blackbox.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">BlackboxAI</span><span class="link-note" data-vi="AI chuyên gen code" data-en="AI for code search & generation">AI chuyên gen code</span></span><span class="link-ext">↗</span></a>
+          <a href="https://chat.z.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Z.ai Chat</span><span class="link-note" data-vi="Chat đa mô hình AI" data-en="Multi-model AI chat">Chat đa mô hình AI</span></span><span class="link-ext">↗</span></a>
+          <a href="https://lmarena.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">LMArena</span><span class="link-note" data-vi="Xếp hạng AI model dạng arena" data-en="AI model ranking in arena">Xếp hạng AI model dạng arena</span></span><span class="link-ext">↗</span></a>
+          <a href="https://manus.im/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Manus AI</span><span class="link-note" data-vi="Agent AI tự động nhiệm vụ" data-en="Autonomous AI agent">Agent AI tự động nhiệm vụ</span></span><span class="link-ext">↗</span></a>
+          <a href="https://clawdbot.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Clawdbot</span><span class="link-note" data-vi="AI assistant đa tác vụ" data-en="Multi-task AI assistant">AI assistant đa tác vụ</span></span><span class="link-ext">↗</span></a>
+          <a href="https://kimi.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Kimi AI</span><span class="link-note" data-vi="Context dài, xử lý file lớn" data-en="Long context, large file support">Context dài, xử lý file lớn</span></span><span class="link-ext">↗</span></a>
+          <a href="https://scira.app/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Scira</span><span class="link-note" data-vi="AI search engine OSS" data-en="Open-source AI search engine">AI search engine OSS</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label" data-vi="Infra & Backend" data-en="Infra & Backend">Infra & Backend</div>
+          <div class="links-grid">
+          <a href="https://vercel.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Vercel</span><span class="link-note" data-vi="Deploy Next.js cực nhanh" data-en="Ultra-fast Next.js deployment">Deploy Next.js cực nhanh</span></span><span class="link-ext">↗</span></a>
+          <a href="https://firebase.google.com/products/studio" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Firebase Studio</span><span class="link-note" data-vi="IDE AI Google + Firebase" data-en="Google AI IDE + Firebase backend">IDE AI Google + Firebase</span></span><span class="link-ext">↗</span></a>
+          <a href="https://neon.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Neon</span><span class="link-note" data-vi="PostgreSQL serverless, auto-scale" data-en="Serverless PostgreSQL, auto-scale">PostgreSQL serverless, auto-scale</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label" data-vi="Code Review & Analysis" data-en="Code Review & Analysis">Code Review & Analysis</div>
+          <div class="links-grid">
+          <a href="https://www.greptile.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Greptile</span><span class="link-note" data-vi="AI Q&A sâu cho toàn codebase" data-en="Deep AI Q&A for your codebase">AI Q&A sâu cho toàn codebase</span></span><span class="link-ext">↗</span></a>
+          <a href="https://traycer.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Traycer AI</span><span class="link-note" data-vi="AI lên kế hoạch & chia task" data-en="AI task planning & breakdown">AI lên kế hoạch & chia task</span></span><span class="link-ext">↗</span></a>
+          <a href="https://pencil.dev/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Pencil.dev</span><span class="link-note" data-vi="AI tự tạo & chạy test" data-en="AI auto-generates and runs tests">AI tự tạo & chạy test</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label" data-vi="Mobile App Builder" data-en="Mobile App Builder">Mobile App Builder</div>
+          <div class="links-grid">
+          <a href="https://onspace.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">OnSpace AI</span><span class="link-note" data-vi="Mobile App bằng AI, zero code" data-en="Mobile apps with AI, no code">Mobile App bằng AI, zero code</span></span><span class="link-ext">↗</span></a>
+          </div>
+          <div class="note-block" style="border-color:var(--accent3)"><span>▸</span><span data-vi="<strong>Less Code → Viết Prompt → Flutter</strong> — Dùng AI mô tả UI rồi gen Flutter code tự động." data-en="<strong>Less Code → Write Prompt → Flutter</strong> — Describe UI with AI, auto-gen Flutter code."><strong>Less Code → Viết Prompt → Flutter</strong> — Gen Flutter code tự động.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="module m5 collapsed" id="m5">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="UI/UX & Thiết Kế" data-en="UI/UX & Design">UI/UX & Thiết Kế</div>
+          <div class="module-desc" data-vi="// Figma · Prototyping · Colors · Diagram" data-en="// Figma · Prototyping · Colors · Diagram">// Figma · Prototyping · Colors · Diagram</div>
+        </div>
+        <div class="module-meta"><span class="module-count">14 items</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="section">
+          <div class="section-label" data-vi="Design Tools" data-en="Design Tools">Design Tools</div>
+          <div class="links-grid">
+          <a href="https://www.figma.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Figma</span><span class="link-note" data-vi="Tool UI/UX số 1, cộng tác cloud" data-en="#1 UI/UX tool, cloud collaboration">Tool UI/UX số 1, cộng tác cloud</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Adobe XD</span><span class="link-note" data-vi="Thiết kế & prototype, Adobe suite" data-en="Design & prototype, Adobe suite">Thiết kế & prototype, Adobe suite</span></span><span class="link-ext">↗</span></a>
+          <a href="https://rive.app/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Rive</span><span class="link-note" data-vi="Animation tương tác, export code" data-en="Interactive animations, export code">Animation tương tác, export code</span></span><span class="link-ext">↗</span></a>
+          <a href="https://stitch.withgoogle.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Stitch by Google</span><span class="link-note" data-vi="AI gen giao diện từ prompt (Google)" data-en="Google AI UI generator from prompts">AI gen giao diện từ prompt (Google)</span></span><span class="link-ext">↗</span></a>
+          <a href="https://sleek.design/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Sleek Design</span><span class="link-note" data-vi="Tài nguyên UI tuyển chọn kỹ" data-en="Curated high-quality UI resources">Tài nguyên UI tuyển chọn kỹ</span></span><span class="link-ext">↗</span></a>
+          <a href="https://shots.so/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Shots.so</span><span class="link-note" data-vi="Mockup màn hình mọi thiết bị" data-en="Beautiful mockups for any device">Mockup màn hình mọi thiết bị</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label" data-vi="Màu sắc & Nền" data-en="Colors & Backgrounds">Màu sắc & Nền</div>
+          <div class="links-grid">
+          <a href="https://www.happyhues.co/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Happy Hues</span><span class="link-note" data-vi="Bảng màu nền trực quan" data-en="Color palettes with live examples">Bảng màu nền trực quan</span></span><span class="link-ext">↗</span></a>
+          <a href="https://neat.firecms.co/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Neat (FireCMS)</span><span class="link-note" data-vi="Gradient động đẹp, copy CSS ngay" data-en="Animated gradients, copy CSS instantly">Gradient động đẹp, copy CSS ngay</span></span><span class="link-ext">↗</span></a>
+          <a href="https://svgwave.in/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">SVG Wave</span><span class="link-note" data-vi="SVG sóng cho header/footer" data-en="Wave SVGs for header/footer">SVG sóng cho header/footer</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-label" data-vi="Diagram & Visual" data-en="Diagram & Visual">Diagram & Visual</div>
+          <div class="links-grid">
+          <a href="https://www.sequencediagram.org/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">SequenceDiagram.org</span><span class="link-note" data-vi="Vẽ UML sequence diagram online" data-en="Draw UML sequence diagrams online">Vẽ UML sequence diagram online</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.drawio.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Draw.io</span><span class="link-note" data-vi="Flowchart & sơ đồ hệ thống, free" data-en="Flowcharts & system diagrams, free">Flowchart & sơ đồ hệ thống, free</span></span><span class="link-ext">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="module m6 collapsed" id="m6">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="Animation & Assets" data-en="Animation & Assets">Animation & Assets</div>
+          <div class="module-desc" data-vi="// Lottie · Icons · Motion · Scroll Effects" data-en="// Lottie · Icons · Motion · Scroll Effects">// Lottie · Icons · Motion · Scroll Effects</div>
+        </div>
+        <div class="module-meta"><span class="module-count">4 items</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="links-grid">
+          <a href="https://lottiefiles.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">LottieFiles</span><span class="link-note" data-vi="Animation JSON nhẹ, embed dễ" data-en="Lightweight JSON animations">Animation JSON nhẹ, embed dễ</span></span><span class="link-ext">↗</span></a>
+          <a href="https://lordicon.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Lordicon</span><span class="link-note" data-vi="Icon động đẹp cho UI" data-en="Beautiful animated icons for UI">Icon động đẹp cho UI</span></span><span class="link-ext">↗</span></a>
+          <a href="https://jitter.video/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Jitter</span><span class="link-note" data-vi="Motion design & video animation" data-en="Motion design & video animations">Motion design & video animation</span></span><span class="link-ext">↗</span></a>
+          <a href="https://webflow.com/made-in-webflow/scroll-animation" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Scroll Animation</span><span class="link-note" data-vi="Showcase scroll animation đẹp" data-en="Beautiful scroll animation showcase">Showcase scroll animation đẹp</span></span><span class="link-ext">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="module m7 collapsed" id="m7">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="Web Templates & UI Kits" data-en="Web Templates & UI Kits">Web Templates & UI Kits</div>
+          <div class="module-desc" data-vi="// Templates · Components · UI Libraries" data-en="// Templates · Components · UI Libraries">// Templates · Components · UI Libraries</div>
+        </div>
+        <div class="module-meta"><span class="module-count">9 items</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="links-grid">
+          <a href="https://pro.aceternity.com/templates" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Aceternity UI</span><span class="link-note" data-vi="Template React đẹp, animation hiện đại" data-en="Beautiful React templates & animations">Template React đẹp, animation hiện đại</span></span><span class="link-ext">↗</span></a>
+          <a href="https://reui.io/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">ReUI</span><span class="link-note" data-vi="Components React chuyên nghiệp" data-en="Professional React UI components">Components React chuyên nghiệp</span></span><span class="link-ext">↗</span></a>
+          <a href="https://21st.dev/home" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">21st.dev</span><span class="link-note" data-vi="UI component OSS chất lượng cao" data-en="High-quality open-source UI">UI component OSS chất lượng cao</span></span><span class="link-ext">↗</span></a>
+          <a href="https://seraui.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">SeraUI</span><span class="link-note" data-vi="Components đẹp, Tailwind CSS" data-en="Beautiful Tailwind CSS components">Components đẹp, Tailwind CSS</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.reactbits.dev/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">React Bits</span><span class="link-note" data-vi="Animated components, copy & paste" data-en="Animated React components">Animated components, copy & paste</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.themedevhub.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Themedevhub</span><span class="link-note" data-vi="Template web free & premium" data-en="Free & premium web templates">Template web free & premium</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.freepik.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Freepik</span><span class="link-note" data-vi="Kho ảnh, vector, mockup lớn" data-en="Large image, vector & mockup library">Kho ảnh, vector, mockup lớn</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.placeit.net/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Placeit</span><span class="link-note" data-vi="Mockup & logo nhanh" data-en="Quick product mockups & logos">Mockup & logo nhanh</span></span><span class="link-ext">↗</span></a>
+          <a href="https://thibautfoussard.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Thibault Gamefolio</span><span class="link-note" data-vi="Portfolio sáng tạo, nguồn cảm hứng" data-en="Creative portfolio, design inspiration">Portfolio sáng tạo, nguồn cảm hứng</span></span><span class="link-ext">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="module m8 collapsed" id="m8">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="Nội Dung & TTS" data-en="Content & TTS">Nội Dung & TTS</div>
+          <div class="module-desc" data-vi="// Infographic · Text to Speech · Prompt" data-en="// Infographic · Text to Speech · Prompt">// Infographic · Text to Speech · Prompt</div>
+        </div>
+        <div class="module-meta"><span class="module-count">4 items</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="links-grid">
+          <a href="https://vietcetera.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Vietcetera</span><span class="link-note" data-vi="Media tech & business VN chất lượng" data-en="Quality Vietnamese tech & business media">Media tech & business VN chất lượng</span></span><span class="link-ext">↗</span></a>
+          <a href="https://notexapp.com/home" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Notex App</span><span class="link-note" data-vi="Text → infographic đẹp, nhanh" data-en="Text to beautiful infographics fast">Text → infographic đẹp, nhanh</span></span><span class="link-ext">↗</span></a>
+          <a href="https://j2team.dev/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">J2TEAM</span><span class="link-note" data-vi="TTS / STT, tiện ích J2TEAM" data-en="TTS / STT tools by J2TEAM">TTS / STT, tiện ích J2TEAM</span></span><span class="link-ext">↗</span></a>
+          <a href="https://prompts.chat/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Prompts.chat</span><span class="link-note" data-vi="Bộ sưu tập AI prompt tốt nhất" data-en="Best AI prompt collection">Bộ sưu tập AI prompt tốt nhất</span></span><span class="link-ext">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="module m9 collapsed" id="m9">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="Công Cụ Dev & Tiện Ích" data-en="Dev Tools & Utilities">Công Cụ Dev & Tiện Ích</div>
+          <div class="module-desc" data-vi="// Tech Stack · SQL · Content Tools" data-en="// Tech Stack · SQL · Content Tools">// Tech Stack · SQL · Content Tools</div>
+        </div>
+        <div class="module-meta"><span class="module-count">3 items</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="links-grid">
+          <a href="https://builtwith.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">BuiltWith</span><span class="link-note" data-vi="Kiểm tra tech stack mọi website" data-en="Check tech stack of any website">Kiểm tra tech stack mọi website</span></span><span class="link-ext">↗</span></a>
+          <a href="https://runql.com/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">RunSQL</span><span class="link-note" data-vi="Chạy SQL query trực tiếp" data-en="Run SQL queries directly in browser">Chạy SQL query trực tiếp</span></span><span class="link-ext">↗</span></a>
+          <a href="https://www.promogen.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">PromoGen</span><span class="link-note" data-vi="Nội dung quảng cáo bằng AI" data-en="AI marketing content generator">Nội dung quảng cáo bằng AI</span></span><span class="link-ext">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="module m10 collapsed" id="m10">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-folder"><svg width="28" height="22" viewBox="0 0 28 22" fill="none"><path class="folder-shape" d="M2 5a2 2 0 012-2h5l2 2.5H24a2 2 0 012 2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" stroke-width="1.4"/></svg></div>
+        <div class="module-title-wrap">
+          <div class="module-title" data-vi="Roadmap & Học Tổng Hợp" data-en="Roadmaps & Learning">Roadmap & Học Tổng Hợp</div>
+          <div class="module-desc" data-vi="// Web Skills · Học mọi thứ · Nâng cao" data-en="// Web Skills · Learn Anything · Advanced">// Web Skills · Học mọi thứ · Nâng cao</div>
+        </div>
+        <div class="module-meta"><span class="module-count">4 items</span><span class="collapse-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></div>
+      </div>
+      <div class="module-body">
+        <div class="links-grid">
+          <a href="https://andreasbm.github.io/web-skills/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Web Skills</span><span class="link-note" data-vi="Bản đồ kỹ năng web dev đầy đủ" data-en="Full visual web dev skills map">Bản đồ kỹ năng web dev đầy đủ</span></span><span class="link-ext">↗</span></a>
+          <a href="https://learn-anything.xyz/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Learn Anything</span><span class="link-note" data-vi="Lộ trình học mọi chủ đề" data-en="Learning paths for any topic">Lộ trình học mọi chủ đề</span></span><span class="link-ext">↗</span></a>
+          <a href="https://ai.google.dev/gemini-api/docs" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Google AI Studio</span><span class="link-note" data-vi="Tài liệu chính thức Google AI" data-en="Official Google AI & Gemini API docs">Tài liệu chính thức Google AI</span></span><span class="link-ext">↗</span></a>
+          <a href="https://z.ai/" target="_blank" rel="noopener" class="link-card"><span class="link-dot"></span><span class="link-info"><span class="link-name">Z.ai</span><span class="link-note" data-vi="AI tổng hợp, so sánh model" data-en="All-in-one AI, compare models">AI tổng hợp, so sánh model</span></span><span class="link-ext">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span class="footer-copy">&copy; <span id="footerYear"></span> Tai Nguyen. All rights reserved.</span>
+  </footer>
+</div>
+
+<div class="wz-overlay" id="wzOverlay">
+  <div class="wz-box">
+    <div class="wz-progress"><div class="wz-progress-bar" id="wzBar" style="width:25%"></div></div>
+    <div class="wz-head">
+      <div class="wz-steps" id="wzSteps"></div>
+      <div class="wz-title" id="wzTitle"></div>
+      <div class="wz-sub" id="wzSub"></div>
+    </div>
+    <div class="wz-body" id="wzBody"></div>
+    <div class="wz-err" id="wzErr"></div>
+    <div class="wz-foot">
+      <button class="wz-skip" id="wzSkip" onclick="skipWizard()" data-vi="Bỏ qua" data-en="Skip">Bỏ qua</button>
+      <div class="wz-actions">
+        <button class="wz-btn wz-btn-back" id="wzBack" onclick="wzPrev()" style="display:none" data-vi="← Quay lại" data-en="← Back">← Quay lại</button>
+        <button class="wz-btn wz-btn-next" id="wzNext" onclick="wzNext()" data-vi="Tiếp theo →" data-en="Next →">Tiếp theo →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+function toggleModule(header) {
+  header.closest('.module').classList.toggle('collapsed');
+}
+
+let currentLang = localStorage.getItem('trh-lang') || 'vi';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('trh-lang', lang);
+  document.documentElement.lang = lang;
+  document.getElementById('btnVI').classList.toggle('active', lang === 'vi');
+  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+  document.querySelectorAll('[data-vi][data-en]').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (val !== null) el.innerHTML = val;
+  });
+  restartTypewriter();
+  if (document.getElementById('wzOverlay').classList.contains('open')) renderWzStep();
+}
+
+const phrases = { vi: ['Truy cập nhanh – Học tập hiệu quả.'], en: ['Quick access – Learn effectively.'] };
+let twChar = 0, twDel = false, twTimer = null;
+
+function restartTypewriter() {
+  clearTimeout(twTimer);
+  twChar = 0; twDel = false;
+  document.getElementById('twEl').textContent = '';
+  twStep();
+}
+
+function twStep() {
+  const str = phrases[currentLang][0];
+  const el = document.getElementById('twEl');
+  if (!twDel) {
+    twChar++;
+    el.textContent = str.slice(0, twChar);
+    if (twChar === str.length) { twTimer = setTimeout(() => { twDel = true; twStep(); }, 3000); return; }
+    twTimer = setTimeout(twStep, 50);
+  } else {
+    twChar--;
+    el.textContent = str.slice(0, twChar);
+    if (twChar === 0) { twDel = false; twTimer = setTimeout(twStep, 500); return; }
+    twTimer = setTimeout(twStep, 25);
+  }
+}
+
+const WZ_DATA = {
+  vi: {
+    steps: [
+      { title: 'Lĩnh vực quan tâm', sub: 'Bạn quan tâm đến mảng nào nhất?', opts: [
+        { icon: '💻', label: 'Lập trình & CS', sub: 'Thuật toán, ngôn ngữ', val: 'cs' },
+        { icon: '🤖', label: 'AI & Machine Learning', sub: 'AI tools, ML, LLM', val: 'ai' },
+        { icon: '🎨', label: 'UI/UX & Design', sub: 'Figma, thiết kế giao diện', val: 'design' },
+        { icon: '🚀', label: 'Fullstack Dev', sub: 'Frontend, backend, deploy', val: 'fullstack' }
+      ]},
+      { title: 'Trình độ hiện tại', sub: 'Bạn đang ở giai đoạn nào?', opts: [
+        { icon: '🌱', label: 'Mới bắt đầu', sub: 'Chưa có kinh nghiệm', val: 'beginner' },
+        { icon: '📖', label: 'Đang học', sub: 'Đã biết cơ bản', val: 'learning' },
+        { icon: '⚡', label: 'Trung cấp', sub: 'Có dự án thực tế', val: 'intermediate' },
+        { icon: '🔥', label: 'Nâng cao', sub: 'Senior / chuyên sâu', val: 'advanced' }
+      ]},
+      { title: 'Loại tài nguyên', sub: 'Bạn thích học qua hình thức nào?', opts: [
+        { icon: '📚', label: 'Tài liệu & Docs', sub: 'Đọc, tham khảo nhanh', val: 'docs' },
+        { icon: '🎥', label: 'Video & Khóa học', sub: 'YouTube, interactive', val: 'video' },
+        { icon: '🛠️', label: 'Công cụ thực hành', sub: 'Build, code, deploy', val: 'tools' },
+        { icon: '🏆', label: 'Luyện tập & Challenge', sub: 'LeetCode, hackathons', val: 'practice' }
+      ]},
+      { title: 'Mục tiêu học tập', sub: 'Bạn muốn đạt được điều gì?', opts: [
+        { icon: '💼', label: 'Tìm việc làm', sub: 'Interview, portfolio', val: 'job' },
+        { icon: '🏗️', label: 'Xây dựng sản phẩm', sub: 'SaaS, app, side project', val: 'build' },
+        { icon: '🧠', label: 'Nâng cao kiến thức', sub: 'Học sâu, nghiên cứu', val: 'knowledge' },
+        { icon: '🌐', label: 'Freelance', sub: 'Làm dự án tự do', val: 'freelance' }
+      ]}
+    ]
+  },
+  en: {
+    steps: [
+      { title: 'Your Interest Area', sub: 'What are you most interested in?', opts: [
+        { icon: '💻', label: 'Programming & CS', sub: 'Algorithms, languages', val: 'cs' },
+        { icon: '🤖', label: 'AI & Machine Learning', sub: 'AI tools, ML, LLM', val: 'ai' },
+        { icon: '🎨', label: 'UI/UX & Design', sub: 'Figma, interface design', val: 'design' },
+        { icon: '🚀', label: 'Fullstack Dev', sub: 'Frontend, backend, deploy', val: 'fullstack' }
+      ]},
+      { title: 'Current Level', sub: 'Where are you right now?', opts: [
+        { icon: '🌱', label: 'Beginner', sub: 'No experience yet', val: 'beginner' },
+        { icon: '📖', label: 'Learning', sub: 'Know the basics', val: 'learning' },
+        { icon: '⚡', label: 'Intermediate', sub: 'Have real projects', val: 'intermediate' },
+        { icon: '🔥', label: 'Advanced', sub: 'Senior level', val: 'advanced' }
+      ]},
+      { title: 'Resource Type', sub: 'How do you prefer to learn?', opts: [
+        { icon: '📚', label: 'Docs & References', sub: 'Reading, quick reference', val: 'docs' },
+        { icon: '🎥', label: 'Videos & Courses', sub: 'YouTube, interactive', val: 'video' },
+        { icon: '🛠️', label: 'Hands-on Tools', sub: 'Build, code, deploy', val: 'tools' },
+        { icon: '🏆', label: 'Practice & Challenges', sub: 'LeetCode, hackathons', val: 'practice' }
+      ]},
+      { title: 'Learning Goal', sub: 'What do you want to achieve?', opts: [
+        { icon: '💼', label: 'Get a Job', sub: 'Interview, portfolio', val: 'job' },
+        { icon: '🏗️', label: 'Build a Product', sub: 'SaaS, app, side project', val: 'build' },
+        { icon: '🧠', label: 'Deepen Knowledge', sub: 'Study, research', val: 'knowledge' },
+        { icon: '🌐', label: 'Freelance', sub: 'Independent projects', val: 'freelance' }
+      ]}
+    ]
+  }
+};
+
+const SUGGEST_MAP = {
+  cs: ['m1','m2'], ai: ['m4'], design: ['m5','m6','m7'], fullstack: ['m4','m5','m9'],
+  beginner: ['m1','m2','m3'], learning: ['m1','m2','m4'], intermediate: ['m4','m5','m9'], advanced: ['m4','m9','m10'],
+  docs: ['m1','m10'], video: ['m2','m4'], tools: ['m4','m9'], practice: ['m2','m3'],
+  job: ['m2','m3','m4'], build: ['m4','m7','m9'], knowledge: ['m1','m10'], freelance: ['m5','m7','m4']
+};
+
+const MODULE_NAMES = {
+  vi: { m1:'Học Lập Trình & CS', m2:'DSA & Thuật Toán', m3:'Diễn Đàn', m4:'AI Coding Tools', m5:'UI/UX & Thiết Kế', m6:'Animation & Assets', m7:'Web Templates', m8:'Nội Dung & TTS', m9:'Công Cụ Dev', m10:'Roadmap & Học' },
+  en: { m1:'Learn CS', m2:'DSA & Algorithms', m3:'Communities', m4:'AI Coding Tools', m5:'UI/UX & Design', m6:'Animation & Assets', m7:'Web Templates', m8:'Content & TTS', m9:'Dev Tools', m10:'Roadmaps' }
+};
+
+let wzStep = 0;
+let wzAnswers = {};
+
+function renderWzStep() {
+  const data = WZ_DATA[currentLang];
+  const s = data.steps[wzStep];
+  const total = data.steps.length;
+  document.getElementById('wzTitle').textContent = s.title;
+  document.getElementById('wzSub').textContent = s.sub;
+  document.getElementById('wzBar').style.width = ((wzStep + 1) / total * 100) + '%';
+  document.getElementById('wzErr').textContent = '';
+  document.getElementById('wzBack').style.display = wzStep > 0 ? '' : 'none';
+  const nextBtn = document.getElementById('wzNext');
+  const isLast = wzStep === total - 1;
+  nextBtn.textContent = isLast ? (currentLang === 'vi' ? 'Hoàn tất ✓' : 'Finish ✓') : (currentLang === 'vi' ? 'Tiếp theo →' : 'Next →');
+  nextBtn.className = 'wz-btn ' + (isLast ? 'wz-btn-done' : 'wz-btn-next');
+
+  const stepsEl = document.getElementById('wzSteps');
+  stepsEl.innerHTML = '';
+  data.steps.forEach(function(_, i) {
+    if (i > 0) {
+      const line = document.createElement('div');
+      line.className = 'wz-step-line' + (i <= wzStep ? ' done' : '');
+      stepsEl.appendChild(line);
+    }
+    const dot = document.createElement('div');
+    dot.className = 'wz-step-dot' + (i < wzStep ? ' done' : i === wzStep ? ' active' : '');
+    dot.textContent = i < wzStep ? '✓' : String(i + 1);
+    stepsEl.appendChild(dot);
+  });
+
+  const body = document.getElementById('wzBody');
+  body.innerHTML = '';
+  const grid = document.createElement('div');
+  grid.className = 'wz-grid';
+  const stepKey = 'step' + wzStep;
+  const saved = wzAnswers[stepKey];
+
+  s.opts.forEach(function(opt) {
+    const div = document.createElement('div');
+    div.className = 'wz-opt' + (saved === opt.val ? ' selected' : '');
+    const iconSpan = document.createElement('span');
+    iconSpan.className = 'wz-opt-icon';
+    iconSpan.textContent = opt.icon;
+    const infoSpan = document.createElement('span');
+    infoSpan.className = 'link-info';
+    const labelSpan = document.createElement('span');
+    labelSpan.className = 'wz-opt-label';
+    labelSpan.textContent = opt.label;
+    const subSpan = document.createElement('span');
+    subSpan.className = 'wz-opt-sub';
+    subSpan.textContent = opt.sub;
+    infoSpan.appendChild(labelSpan);
+    infoSpan.appendChild(subSpan);
+    div.appendChild(iconSpan);
+    div.appendChild(infoSpan);
+    div.onclick = function() {
+      document.querySelectorAll('.wz-opt').forEach(function(o) { o.classList.remove('selected'); });
+      div.classList.add('selected');
+      wzAnswers[stepKey] = opt.val;
+      document.getElementById('wzErr').textContent = '';
+    };
+    grid.appendChild(div);
+  });
+  body.appendChild(grid);
+}
+
+function wzNext() {
+  const stepKey = 'step' + wzStep;
+  if (!wzAnswers[stepKey]) {
+    document.getElementById('wzErr').textContent = currentLang === 'vi' ? '⚠ Vui lòng chọn một lựa chọn.' : '⚠ Please select an option.';
+    return;
+  }
+  const total = WZ_DATA[currentLang].steps.length;
+  if (wzStep < total - 1) { wzStep++; renderWzStep(); }
+  else { finishWizard(); }
+}
+
+function wzPrev() {
+  if (wzStep > 0) { wzStep--; renderWzStep(); }
+}
+
+function finishWizard() {
+  const prefs = { step0: wzAnswers.step0, step1: wzAnswers.step1, step2: wzAnswers.step2, step3: wzAnswers.step3 };
+  localStorage.setItem('trh-prefs', JSON.stringify(prefs));
+  localStorage.setItem('trh-wizard-done', '1');
+  closeWizard();
+  applyRecommendations(prefs);
+}
+
+function skipWizard() {
+  localStorage.setItem('trh-wizard-done', '1');
+  closeWizard();
+}
+
+function resetWizard() {
+  localStorage.removeItem('trh-wizard-done');
+  localStorage.removeItem('trh-prefs');
+  document.getElementById('suggestBanner').classList.remove('show');
+  wzStep = 0; wzAnswers = {};
+  openWizard();
+}
+
+function openWizard() {
+  const ov = document.getElementById('wzOverlay');
+  ov.style.display = 'flex';
+  requestAnimationFrame(function() {
+    requestAnimationFrame(function() { ov.classList.add('open'); });
+  });
+  renderWzStep();
+}
+
+function closeWizard() {
+  const ov = document.getElementById('wzOverlay');
+  ov.classList.remove('open');
+  setTimeout(function() { ov.style.display = 'none'; }, 300);
+}
+
+function applyRecommendations(prefs) {
+  const allVals = Object.values(prefs).filter(Boolean);
+  const moduleSet = new Set();
+  allVals.forEach(function(v) { if (SUGGEST_MAP[v]) SUGGEST_MAP[v].forEach(function(m) { moduleSet.add(m); }); });
+  const modules = Array.from(moduleSet);
+  if (!modules.length) return;
+  const banner = document.getElementById('suggestBanner');
+  const chips = document.getElementById('suggestChips');
+  chips.innerHTML = '';
+  const names = MODULE_NAMES[currentLang];
+  modules.forEach(function(mid) {
+    const a = document.createElement('a');
+    a.href = '#' + mid;
+    a.className = 'suggest-chip';
+    a.textContent = names[mid] || mid;
+    chips.appendChild(a);
+  });
+  banner.classList.add('show');
+}
+
+function showSecWarn(msg, sub) {
+  document.getElementById('sec-msg').textContent = msg;
+  document.getElementById('sec-sub').textContent = sub || 'Trang web này được bảo vệ.';
+  document.getElementById('sec-warn').classList.add('show');
+}
+
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+  showSecWarn('Chuột phải bị chặn', 'Vui lòng không cố gắng xem mã nguồn.');
+});
+
+document.addEventListener('copy', function(e) {
+  e.preventDefault();
+  showSecWarn('Sao chép bị chặn', 'Nội dung trang này được bảo vệ bản quyền.');
+});
+
+document.addEventListener('cut', function(e) { e.preventDefault(); });
+
+document.addEventListener('keydown', function(e) {
+  const blocked = e.key === 'F12'
+    || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C'))
+    || (e.ctrlKey && (e.key === 'u' || e.key === 'U'))
+    || (e.ctrlKey && (e.key === 's' || e.key === 'S'))
+    || (e.ctrlKey && (e.key === 'p' || e.key === 'P'));
+  if (blocked) {
+    e.preventDefault();
+    e.stopPropagation();
+    showSecWarn('Thao tác bị chặn', 'Hành động can thiệp vào mã nguồn không được phép.');
+    return false;
+  }
+  if (e.key === 'PrintScreen') {
+    showSecWarn('Chụp ảnh màn hình bị chặn', 'Vui lòng không chụp ảnh nội dung trang này.');
+  }
+});
+
+document.getElementById('footerYear').textContent = new Date().getFullYear();
+setLang(currentLang);
+
+const savedPrefs = localStorage.getItem('trh-prefs');
+const wizardDone = localStorage.getItem('trh-wizard-done');
+if (!wizardDone) {
+  setTimeout(openWizard, 600);
+} else if (savedPrefs) {
+  try { applyRecommendations(JSON.parse(savedPrefs)); } catch(e) {}
+}
+
+</script>
+</body>
+</html>
