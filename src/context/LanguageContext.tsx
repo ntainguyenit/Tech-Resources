@@ -12,7 +12,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>(() => {
-    return (localStorage.getItem('lang') as Language) || 'vi';
+    return (localStorage.getItem('lang') as Language) || 'en';
   });
 
   useEffect(() => {

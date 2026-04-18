@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
           margin: 0 auto;
         }
         .hero-title {
-          font-size: clamp(2.5rem, 8vw, 4.5rem);
+          font-size: clamp(2rem, 6vw, 4.5rem);
           font-weight: 900;
           letter-spacing: -0.05em;
           line-height: 1.1;
@@ -64,6 +64,8 @@ const Hero: React.FC = () => {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           min-height: 1.1em;
+          white-space: nowrap;
+          overflow: visible;
         }
         .cursor {
           -webkit-text-fill-color: var(--brand-secondary);

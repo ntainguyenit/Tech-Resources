@@ -2,7 +2,6 @@ import React from 'react';
 import { Search, Globe, Moon, Sun } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
-import { useToast } from '../context/ToastContext';
 
 interface NavbarProps {
   searchQuery: string;
@@ -12,17 +11,14 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ searchQuery, setSearchQuery }) => {
   const { language, setLanguage, t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
-  const { showToast } = useToast();
 
   const handleLangToggle = () => {
     const newLang = language === 'vi' ? 'en' : 'vi';
     setLanguage(newLang);
-    showToast(newLang === 'vi' ? 'Đã chuyển sang Tiếng Việt' : 'Switched to English');
   };
 
   const handleThemeToggle = () => {
     toggleTheme();
-    showToast(theme === 'light' ? (language === 'vi' ? 'Chế độ tối' : 'Dark Mode') : (language === 'vi' ? 'Chế độ sáng' : 'Light Mode'));
   };
 
   return (

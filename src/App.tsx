@@ -88,6 +88,34 @@ const App: React.FC = () => {
             </AnimatePresence>
           </section>
         </div>
+
+        <section id="about" className="about-section">
+          <header className="section-label">
+            {t({ vi: "Về Dự Án", en: "About Project" })}
+          </header>
+          <div className="about-content">
+            <h3 className="about-title">
+              {t({ 
+                vi: "Trung tâm lưu trữ tài nguyên kỹ thuật chọn lọc", 
+                en: "Curated Technical Resource Repository" 
+              })}
+            </h3>
+            <p className="about-text">
+              {t({
+                vi: "Tech Resources Hub là một nền tảng học thuật được thiết kế để quản lý và phân loại các tài nguyên kỹ thuật số chất lượng cao trong lĩnh vực phát triển phần mềm và khoa học máy tính. Dự án tập trung vào việc sàng lọc các công cụ, thư viện và kiến thức nền tảng nhằm tối ưu hóa lộ trình học tập và nghiên cứu cho cộng đồng lập trình viên chuyên nghiệp.",
+                en: "The Tech Resources Hub is an academic-oriented platform designed to curate and categorize high-quality digital assets within the software development and computer science domains. This project focuses on filtering essential tools, libraries, and fundamental knowledge to optimize learning pathways and research methodologies for the professional developer community."
+              })}
+            </p>
+            <div className="about-meta">
+              <span className="meta-item">
+                <strong>Project Lead:</strong> Tai Nguyen
+              </span>
+              <span className="meta-item">
+                <strong>Focus:</strong> Quality over Quantity, Academic Integrity
+              </span>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
@@ -124,8 +152,9 @@ const App: React.FC = () => {
           .sidebar {
             display: block;
             position: sticky;
-            top: 6rem;
+            top: 5rem;
             height: fit-content;
+            align-self: start;
           }
         }
         .side-nav-title {
@@ -194,12 +223,37 @@ const App: React.FC = () => {
           gap: 1.25rem;
         }
         
-        .no-results {
-          padding: 4rem;
-          text-align: center;
+        .about-section {
+          margin-top: 8rem;
+          padding-top: 4rem;
+          border-top: 1px solid var(--border);
+        }
+        .about-content {
+          max-width: 800px;
+        }
+        .about-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--text-primary);
+          margin-bottom: 1.5rem;
+        }
+        .about-text {
+          font-size: 1rem;
+          line-height: 1.8;
+          color: var(--text-secondary);
+          margin-bottom: 2rem;
+          text-align: justify;
+        }
+        .about-meta {
+          display: flex;
+          gap: 2rem;
+          font-size: 0.8125rem;
           color: var(--text-muted);
-          border: 2px dashed var(--border);
-          border-radius: var(--radius-lg);
+          font-family: 'IBM Plex Mono', monospace;
+        }
+        .meta-item strong {
+          color: var(--brand-primary);
+          margin-right: 0.5rem;
         }
       `}</style>
     </div>
