@@ -5,9 +5,6 @@ import { motion } from 'framer-motion';
 const Hero: React.FC = () => {
   const { t } = useLanguage();
   const title = t({ vi: "Tài nguyên công nghệ", en: "Tech Resources" });
-  const characters = Array.from(title);
-  const totalDuration = 3;
-  const staggerDelay = totalDuration / characters.length;
 
   return (
     <div className="hero">
@@ -16,29 +13,7 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="hero-title">
-          {characters.map((char, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.1,
-                delay: index * staggerDelay,
-              }}
-            >
-              {char}
-            </motion.span>
-          ))}
-          <motion.span 
-            className="cursor"
-            animate={{ opacity: [0, 1, 0] }}
-            transition={{ duration: 0.8, repeat: Infinity }}
-          >
-            |
-          </motion.span>
-          <span className="dot">.</span>
-        </h1>
+        <h1 className="hero-title">{title}</h1>
         <p className="hero-subtitle">
           {t({
             vi: "Bộ sưu tập tài nguyên kỹ thuật số được tuyển chọn chuyên nghiệp",
@@ -66,15 +41,6 @@ const Hero: React.FC = () => {
           min-height: 1.1em;
           white-space: nowrap;
           overflow: visible;
-        }
-        .cursor {
-          -webkit-text-fill-color: var(--brand-secondary);
-          margin-left: 2px;
-          font-weight: 200;
-        }
-        .dot {
-          color: var(--brand-secondary);
-          -webkit-text-fill-color: var(--brand-secondary);
         }
         .hero-subtitle {
           font-family: 'IBM Plex Mono', monospace;
