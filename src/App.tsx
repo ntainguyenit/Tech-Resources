@@ -30,7 +30,11 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Navbar 
+        searchQuery={searchQuery} 
+        setSearchQuery={setSearchQuery} 
+        onBrandClick={() => setSearchQuery('')}
+      />
       
       <main className="container">
         <Hero />

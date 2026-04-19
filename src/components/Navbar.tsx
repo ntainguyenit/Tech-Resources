@@ -6,9 +6,10 @@ import { useTheme } from '../context/ThemeContext';
 interface NavbarProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
+  onBrandClick?: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ searchQuery, setSearchQuery }) => {
+const Navbar: React.FC<NavbarProps> = ({ searchQuery, setSearchQuery, onBrandClick }) => {
   const { language, setLanguage, t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
 
@@ -24,7 +25,13 @@ const Navbar: React.FC<NavbarProps> = ({ searchQuery, setSearchQuery }) => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="nav-left">
+        <div 
+          className="nav-left brand-link" 
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            onBrandClick?.();
+          }}
+        >
           <div className="logo-gradient">TR</div>
           <span className="nav-title">Tech Resources</span>
         </div>
@@ -77,6 +84,16 @@ const Navbar: React.FC<NavbarProps> = ({ searchQuery, setSearchQuery }) => {
           display: flex;
           align-items: center;
           gap: 0.75rem;
+        }
+        .brand-link {
+          cursor: pointer;
+          transition: transform 0.2s ease;
+        }
+        .brand-link:hover {
+          transform: scale(1.02);
+        }
+        .brand-link:active {
+          transform: scale(0.98);
         }
         .logo-gradient {
           width: 36px;
