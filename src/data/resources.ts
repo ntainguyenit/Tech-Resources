@@ -124,6 +124,13 @@ export const categories: Category[] = [
           { id: "neat", name: "Neat", url: "https://neat.firecms.co/", note: { vi: "Gradient động đẹp, copy CSS ngay", en: "Animated gradients, copy CSS instantly" } },
         ],
       },
+      {
+        title: { vi: "Video & Animation", en: "Video & Animation" },
+        links: [
+          { id: "swishy", name: "Swishy", url: "https://www.swishy.ai/", note: { vi: "Tạo animation quảng cáo bằng AI", en: "AI-powered ad animation creator" }, isNew: true },
+          { id: "captist", name: "Captist", url: "https://captist.com/vi/", note: { vi: "Quay video màn hình chuyên nghiệp, auto zoom", en: "Pro screen recording with auto zoom" }, isNew: true },
+        ],
+      },
     ],
   },
   {

@@ -22,7 +22,12 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource }) => {
     >
       <div className="card-content">
         <div className="card-header">
-          <h3 className="card-title">{resource.name}</h3>
+          <div className="title-wrapper">
+            <h3 className="card-title">{resource.name}</h3>
+            {resource.isNew && (
+              <span className="new-badge">NEW</span>
+            )}
+          </div>
           <ExternalLink size={14} className="card-icon" />
         </div>
         <p className="card-note">{t(resource.note)}</p>
@@ -55,10 +60,26 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource }) => {
           justify-content: space-between;
           margin-bottom: 0.5rem;
         }
+        .title-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
         .card-title {
           font-size: 1rem;
           font-weight: 700;
           color: var(--text-primary);
+        }
+        .new-badge {
+          background: var(--brand-gradient);
+          color: white;
+          font-size: 0.625rem;
+          font-weight: 800;
+          padding: 2px 6px;
+          border-radius: 4px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          line-height: 1;
         }
         .card-icon {
           color: var(--text-muted);
