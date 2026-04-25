@@ -88,6 +88,10 @@ export const categories: Category[] = [
       {
         title: { vi: "Vibe Coding / App Builder", en: "Vibe Coding / App Builder" },
         links: [
+          { id: "capacity", name: "Capacity", url: "https://capacity.so/", note: { vi: "AI xây dựng app full-stack qua chat", en: "AI builds full-stack apps via chat" }, isNew: true },
+          { id: "opal", name: "Opal", url: "https://opal.withgoogle.com/landing", note: { vi: "Tạo mini-app AI bằng ngôn ngữ tự nhiên (Google)", en: "Create AI mini-apps with natural language (Google)" }, isNew: true },
+          { id: "aura", name: "Aura", url: "https://aura.build/", note: { vi: "Tự động tạo UI & code bằng AI", en: "Automated AI UI & code generation" }, isNew: true },
+          { id: "woz", name: "Woz", url: "https://withwoz.com/", note: { vi: "Nền tảng kỹ sư phần mềm AI", en: "AI software engineer platform" }, isNew: true },
           { id: "lovable", name: "Lovable", url: "https://lovable.dev/", note: { vi: "Fullstack app từ ngôn ngữ tự nhiên", en: "Fullstack app from natural language" } },
           { id: "bolt", name: "Bolt.new", url: "https://bolt.new/", note: { vi: "Build & deploy ngay trong browser", en: "Build & deploy right in browser" } },
           { id: "v0", name: "V0 by Vercel", url: "https://v0.dev/", note: { vi: "Gen UI React từ prompt", en: "Generate React UI from prompts" } },
@@ -112,6 +116,7 @@ export const categories: Category[] = [
       {
         title: { vi: "Công cụ thiết kế", en: "Design Tools" },
         links: [
+          { id: "skeudesign", name: "SkeuDesign", url: "https://skeudesign.com/", note: { vi: "AI tạo icon 3D skeuomorphic", en: "AI generates 3D skeuomorphic icons" }, isNew: true },
           { id: "figma", name: "Figma", url: "https://www.figma.com/", note: { vi: "Tool UI/UX số 1, cộng tác cloud", en: "#1 UI/UX tool, cloud collaboration" } },
           { id: "rive", name: "Rive", url: "https://rive.app/", note: { vi: "Animation tương tác, export code", en: "Interactive animations, export code" } },
           { id: "shots", name: "Shots.so", url: "https://shots.so/", note: { vi: "Mockup màn hình mọi thiết bị", en: "Beautiful mockups for any device" } },
