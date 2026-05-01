@@ -34,6 +34,7 @@ export const categories: Category[] = [
           { id: "programiz", name: "Programiz", url: "https://www.programiz.com/", note: { vi: "Python, C, Java... thân thiện newbie", en: "Python, C, Java... beginner-friendly" } },
           { id: "educative", name: "Educative.io", url: "https://www.educative.io/", note: { vi: "Khóa học tương tác, code trực tiếp", en: "Interactive courses, run code in browser" } },
           { id: "viblo", name: "Viblo", url: "https://viblo.asia/newest", note: { vi: "Cộng đồng IT lớn nhất Việt Nam", en: "Vietnam's largest IT community" } },
+          { id: "j2team-launch", name: "J2TEAM Launch", url: "https://launch.j2team.dev/products", note: { vi: "Khám phá và ra mắt sản phẩm công nghệ", en: "Tech product discovery and launch platform" }, isNew: true },
         ],
       },
     ],
@@ -83,6 +84,7 @@ export const categories: Category[] = [
           { id: "trae", name: "Trae", url: "https://www.trae.ai/", note: { vi: "IDE AI miễn phí từ ByteDance", en: "Free AI IDE by ByteDance" } },
           { id: "warp", name: "Warp", url: "https://www.warp.dev/", note: { vi: "Terminal AI thế hệ mới", en: "Next-gen AI-powered terminal" } },
           { id: "coderabbit", name: "CodeRabbit", url: "https://www.coderabbit.ai/", note: { vi: "AI tự động review PR", en: "Automated AI PR reviews" } },
+          { id: "qoder", name: "Qoder", url: "https://qoder.com/", note: { vi: "AI Coding Assistant, hỗ trợ code agentic", en: "AI Coding Assistant, supports agentic coding" }, isNew: true },
         ],
       },
       {
@@ -96,6 +98,7 @@ export const categories: Category[] = [
           { id: "bolt", name: "Bolt.new", url: "https://bolt.new/", note: { vi: "Build & deploy ngay trong browser", en: "Build & deploy right in browser" } },
           { id: "v0", name: "V0 by Vercel", url: "https://v0.dev/", note: { vi: "Gen UI React từ prompt", en: "Generate React UI from prompts" } },
           { id: "replit", name: "Replit", url: "https://replit.com/", note: { vi: "IDE online, AI Agent, mọi ngôn ngữ", en: "Online IDE, AI Agent, any language" } },
+          { id: "saleo", name: "Saleo", url: "https://saleo.io/", note: { vi: "Tạo bản demo sản phẩm SaaS chuyên nghiệp", en: "Create professional SaaS product demos" }, isNew: true },
         ],
       },
       {
