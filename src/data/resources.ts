@@ -122,7 +122,19 @@ export const categories: Category[] = [
           { id: "skeudesign", name: "SkeuDesign", url: "https://skeudesign.com/", note: { vi: "AI tạo icon 3D skeuomorphic", en: "AI generates 3D skeuomorphic icons" }, isNew: true },
           { id: "figma", name: "Figma", url: "https://www.figma.com/", note: { vi: "Tool UI/UX số 1, cộng tác cloud", en: "#1 UI/UX tool, cloud collaboration" } },
           { id: "rive", name: "Rive", url: "https://rive.app/", note: { vi: "Animation tương tác, export code", en: "Interactive animations, export code" } },
+        ],
+      },
+      {
+        title: { vi: "Device Mockup", en: "Device Mockup" },
+        links: [
           { id: "shots", name: "Shots.so", url: "https://shots.so/", note: { vi: "Mockup màn hình mọi thiết bị", en: "Beautiful mockups for any device" } },
+          { id: "jitter", name: "Jitter", url: "https://jitter.video/", note: { vi: "Công cụ motion design cho UI", en: "Motion design tool for UI" }, isNew: true },
+          { id: "device-frames", name: "Device Frames", url: "https://deviceframes.com/", note: { vi: "Tạo mockup thiết bị 3D", en: "Create 3D device mockups" }, isNew: true },
+          { id: "mockup-snap", name: "MockupSnap", url: "https://mockupsnap.app/", note: { vi: "Tạo mockup nhanh chóng", en: "Quickly create mockups" }, isNew: true },
+          { id: "mockup-frame", name: "MockupFrame", url: "https://mockupframe.com/", note: { vi: "Mockup thiết bị và khung hình", en: "Device mockups and frames" }, isNew: true },
+          { id: "riseshot", name: "Riseshot", url: "https://www.riseshot.com/", note: { vi: "Mockup thiết bị cao cấp", en: "Premium device mockups" }, isNew: true },
+          { id: "screenwrap", name: "Screenwrap", url: "https://www.screenwrap.xyz/", note: { vi: "Quay màn hình và mockup đẹp", en: "Beautiful screen recordings and mockups" }, isNew: true },
+          { id: "chroma-portal", name: "Chroma Portal", url: "https://chromaportal.com/", note: { vi: "Mockup thiết bị 3D trên trình duyệt", en: "3D device mockups in browser" }, isNew: true },
         ],
       },
       {
