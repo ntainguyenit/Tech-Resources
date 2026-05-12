@@ -147,8 +147,10 @@ export const categories: Category[] = [
       {
         title: { vi: "Video & Animation", en: "Video & Animation" },
         links: [
+          { id: "screen-studio", name: "Screen Studio", url: "https://www.screen.studio/", note: { vi: "Quay màn hình chuyên nghiệp, tự động zoom", en: "Beautiful screen recordings with auto zoom" }, isNew: true },
+          { id: "openscreen", name: "OpenScreen", url: "https://openscreen.vercel.app/", note: { vi: "Quay video demo với hiệu ứng zoom mượt mà", en: "Record demo videos with smooth zoom effects" }, isNew: true },
+          { id: "captist", name: "Captist", url: "https://captist.com/vi/", note: { vi: "Auto zoom video màn hình, phù hợp làm tutorial", en: "Auto zoom screen recordings, perfect for tutorials" }, isNew: true },
           { id: "swishy", name: "Swishy", url: "https://www.swishy.ai/", note: { vi: "Tạo animation quảng cáo bằng AI", en: "AI-powered ad animation creator" }, isNew: true },
-          { id: "captist", name: "Captist", url: "https://captist.com/vi/", note: { vi: "Quay video màn hình chuyên nghiệp, auto zoom", en: "Pro screen recording with auto zoom" }, isNew: true },
         ],
       },
     ],
