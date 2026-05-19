@@ -1,56 +1,64 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { motion } from 'framer-motion';
 
-const Hero: React.FC = () => {
-  const { t } = useLanguage();
-  const title = t({ vi: "Tài nguyên công nghệ", en: "Tech Resources" });
+const phrases = {
+  vi: 'Truy cập nhanh – Học tập hiệu quả.',
+  en: 'Quick access – Learn effectively.'
+};
+
+export const Hero: React.FC = () => {
+  const { language } = useLanguage();
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    let twChar = 0;
+    let twDel = false;
+    let twTimer: any = null;
+    const str = phrases[language];
+
+    const twStep = () => {
+      if (!twDel) {
+        twChar++;
+        setDisplayedText(str.slice(0, twChar));
+        if (twChar === str.length) {
+          twTimer = setTimeout(() => {
+            twDel = true;
+            twStep();
+          }, 3000);
+          return;
+        }
+        twTimer = setTimeout(twStep, 50);
+      } else {
+        twChar--;
+        setDisplayedText(str.slice(0, twChar));
+        if (twChar === 0) {
+          twDel = false;
+          twTimer = setTimeout(twStep, 500);
+          return;
+        }
+        twTimer = setTimeout(twStep, 25);
+      }
+    };
+
+    // Start typewriter
+    setDisplayedText('');
+    twStep();
+
+    return () => {
+      if (twTimer) {
+        clearTimeout(twTimer);
+      }
+    };
+  }, [language]);
 
   return (
-    <div className="hero">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h1 className="hero-title">{title}</h1>
-        <p className="hero-subtitle">
-          {t({
-            vi: "Bộ sưu tập tài nguyên kỹ thuật số được tuyển chọn chuyên nghiệp",
-            en: "A professionally curated collection of digital resources"
-          })}
-        </p>
-      </motion.div>
-
-      <style>{`
-        .hero {
-          padding: 6rem 1.5rem 4rem;
-          text-align: center;
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        .hero-title {
-          font-size: clamp(2rem, 6vw, 4.5rem);
-          font-weight: 900;
-          letter-spacing: -0.05em;
-          line-height: 1.1;
-          margin-bottom: 1.5rem;
-          background: var(--brand-gradient);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          min-height: 1.1em;
-          white-space: nowrap;
-          overflow: visible;
-        }
-        .hero-subtitle {
-          font-family: 'IBM Plex Mono', monospace;
-          color: var(--text-secondary);
-          font-size: 1rem;
-          max-width: 600px;
-          margin: 0 auto;
-        }
-      `}</style>
-    </div>
+    <header className="hero">
+      <h1 className="hero-title">Tech Resources Hub</h1>
+      <div className="hero-typewriter">
+        <span>{displayedText}</span>
+        <span className="cursor"></span>
+      </div>
+    </header>
   );
 };
 
